@@ -77,6 +77,18 @@ ModelImporter:
     7400012: Idle_1
     7400014: Jump
     7400016: Run_foreward
+    7400018: attack6
+    7400020: block
+    7400022: damage1
+    7400024: damage2
+    7400026: damage3
+    7400028: death
+    7400030: draw_weapon
+    7400032: idle_2
+    7400034: kick1
+    7400036: kick2
+    7400038: kick3
+    7400040: roll
     9500000: //RootNode
     13700000: Scarecrow
   materials:
