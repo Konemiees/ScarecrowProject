@@ -6,12 +6,74 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: chest
+    100004: finger1_L
+    100006: finger1_R
+    100008: finger2_L
+    100010: finger2_R
+    100012: foot_controller_L
+    100014: foot_controller_R
+    100016: foot_L
+    100018: foot_R
+    100020: forearm_L
+    100022: forearm_R
+    100024: hand_L
+    100026: hand_R
+    100028: head
+    100030: hips
+    100032: metarig
+    100034: neck
+    100036: Scarecrow
+    100038: Scarecrow_controller
+    100040: shin_L
+    100042: shin_R
+    100044: shoulder_L
+    100046: shoulder_R
+    100048: spine
+    100050: thigh_L
+    100052: thigh_R
+    100054: Toes_L
+    100056: Toes_R
+    100058: upper_arm_L
+    100060: upper_arm_R
     400000: //RootNode
+    400002: chest
+    400004: finger1_L
+    400006: finger1_R
+    400008: finger2_L
+    400010: finger2_R
+    400012: foot_controller_L
+    400014: foot_controller_R
+    400016: foot_L
+    400018: foot_R
+    400020: forearm_L
+    400022: forearm_R
+    400024: hand_L
+    400026: hand_R
+    400028: head
+    400030: hips
+    400032: metarig
+    400034: neck
+    400036: Scarecrow
+    400038: Scarecrow_controller
+    400040: shin_L
+    400042: shin_R
+    400044: shoulder_L
+    400046: shoulder_R
+    400048: spine
+    400050: thigh_L
+    400052: thigh_R
+    400054: Toes_L
+    400056: Toes_R
+    400058: upper_arm_L
+    400060: upper_arm_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: Scarecrow
     7400000: Default Take
+    7400002: metarigAction_001
     9500000: //RootNode
+    13700000: Scarecrow
   materials:
     importMaterials: 1
     materialName: 0
