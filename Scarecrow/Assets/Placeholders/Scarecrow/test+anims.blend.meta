@@ -36,6 +36,15 @@ ModelImporter:
     100056: Toes_R
     100058: upper_arm_L
     100060: upper_arm_R
+    100062: Foot_L
+    100064: Foot_R
+    100066: LowerLeg_L
+    100068: LowerLeg_R
+    100070: Shoulder_L
+    100072: Shoulder_R
+    100074: Tati_Moonikas_Armature
+    100076: UpperLeg_L
+    100078: UpperLeg_R
     400000: chest
     400002: finger1_L
     400004: finger1_R
@@ -67,6 +76,15 @@ ModelImporter:
     400056: Toes_R
     400058: upper_arm_L
     400060: upper_arm_R
+    400062: Foot_L
+    400064: Foot_R
+    400066: LowerLeg_L
+    400068: LowerLeg_R
+    400070: Shoulder_L
+    400072: Shoulder_R
+    400074: Tati_Moonikas_Armature
+    400076: UpperLeg_L
+    400078: UpperLeg_R
     4300000: Scarecrow
     7400000: Default Take
     7400002: attack1
@@ -89,6 +107,7 @@ ModelImporter:
     7400036: kick2
     7400038: kick3
     7400040: roll
+    7400042: roll_2nd
     9500000: //RootNode
     13700000: Scarecrow
   materials:
