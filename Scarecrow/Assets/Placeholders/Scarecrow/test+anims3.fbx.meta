@@ -102,6 +102,13 @@ ModelImporter:
     7400010: Scarecrow|attack6
     7400012: Scarecrow|Run foreward
     7400014: Tati Moonikas Armature|Run Foreward Baked
+    7400016: Tati Moonikas Armature|idle1b
+    7400018: Tati Moonikas Armature|idle2b
+    7400020: Tati Moonikas Armature|Run forewardb
+    7400022: Tati Moonikas Armature|jumpb
+    7400024: Tati Moonikas Armature|roll 2ndb
+    7400026: Tati Moonikas Armature|kick1b
+    7400028: Tati Moonikas Armature|deathb
     9500000: //RootNode
     13700000: Scarecrow
   materials:
@@ -125,8 +132,236 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Tati Moonikas Armature|Action
-      takeName: Tati Moonikas Armature|Action
+      name: Tati Moonikas Armature|idle1b
+      takeName: Tati Moonikas Armature|idle1b
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Scarecrow
+        weight: 0
+      - path: Tati Moonikas Armature
+        weight: 1
+      - path: Tati Moonikas Armature/Foot_Control.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tati Moonikas Armature|idle2b
+      takeName: Tati Moonikas Armature|idle2b
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Scarecrow
+        weight: 0
+      - path: Tati Moonikas Armature
+        weight: 1
+      - path: Tati Moonikas Armature/Foot_Control.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tati Moonikas Armature|Run forewardb
+      takeName: Tati Moonikas Armature|Run forewardb
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -134,14 +369,14 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -239,352 +474,10 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Tati Moonikas Armature|Action.001
-      takeName: Tati Moonikas Armature|Action.001
+      name: Tati Moonikas Armature|jumpb
+      takeName: Tati Moonikas Armature|jumpb
       firstFrame: 0
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Scarecrow
-        weight: 0
-      - path: Tati Moonikas Armature
-        weight: 1
-      - path: Tati Moonikas Armature/Foot_Control.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
-        weight: 0
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Tati Moonikas Armature|Foot_Roll.L
-      takeName: Tati Moonikas Armature|Foot_Roll.L
-      firstFrame: 0
-      lastFrame: 21
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Scarecrow
-        weight: 0
-      - path: Tati Moonikas Armature
-        weight: 1
-      - path: Tati Moonikas Armature/Foot_Control.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
-        weight: 0
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Tati Moonikas Armature|foot_tumble
-      takeName: Tati Moonikas Armature|foot_tumble
-      firstFrame: 0
-      lastFrame: 21
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Scarecrow
-        weight: 0
-      - path: Tati Moonikas Armature
-        weight: 1
-      - path: Tati Moonikas Armature/Foot_Control.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
-        weight: 0
-      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
-        weight: 0
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
-        weight: 1
-      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
-        weight: 0
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: Tati Moonikas Armature|Run Foreward Baked
-      takeName: Tati Moonikas Armature|Run Foreward Baked
-      firstFrame: 0
-      lastFrame: 30
+      lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -695,10 +588,10 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Scarecrow|Run foreward
-      takeName: Scarecrow|Run foreward
+      name: Tati Moonikas Armature|roll 2ndb
+      takeName: Tati Moonikas Armature|roll 2ndb
       firstFrame: 0
-      lastFrame: 31
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -709,10 +602,238 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Scarecrow
+        weight: 0
+      - path: Tati Moonikas Armature
+        weight: 1
+      - path: Tati Moonikas Armature/Foot_Control.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tati Moonikas Armature|kick1b
+      takeName: Tati Moonikas Armature|kick1b
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Scarecrow
+        weight: 0
+      - path: Tati Moonikas Armature
+        weight: 1
+      - path: Tati Moonikas Armature/Foot_Control.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_roll.L/foot_roll.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.L/foot_tumble.L/foot_tumble.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_roll.R/foot_roll.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R
+        weight: 0
+      - path: Tati Moonikas Armature/Foot_Control.R/foot_tumble.R/foot_tumble.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/neck/head/head_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L/finger1.L/finger2.L/finger2.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R/finger1.R/finger2.R/finger2.R_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: Tati Moonikas Armature/Scarecrow controller/hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tati Moonikas Armature|deathb
+      takeName: Tati Moonikas Armature|deathb
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
