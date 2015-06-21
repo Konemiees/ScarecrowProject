@@ -109,6 +109,7 @@ ModelImporter:
     7400024: Tati Moonikas Armature|roll 2ndb
     7400026: Tati Moonikas Armature|kick1b
     7400028: Tati Moonikas Armature|deathb
+    7400030: Tati Moonikas Armature|kick3b
     9500000: //RootNode
     13700000: Scarecrow
   materials:
@@ -372,7 +373,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
@@ -485,13 +486,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 1
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -702,10 +703,10 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Tati Moonikas Armature|kick1b
-      takeName: Tati Moonikas Armature|kick1b
+      name: Tati Moonikas Armature|kick3b
+      takeName: Tati Moonikas Armature|kick3b
       firstFrame: 0
-      lastFrame: 16
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -128,6 +128,7 @@ ModelImporter:
     7400078: roll_2ndb
     7400080: Run_foreward
     7400082: Run_forewardb
+    7400084: Run_Left
     9500000: //RootNode
     13700000: Scarecrow
   materials:
