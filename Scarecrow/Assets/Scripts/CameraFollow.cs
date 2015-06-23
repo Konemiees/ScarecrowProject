@@ -17,14 +17,12 @@ public class CameraFollow : MonoBehaviour
 	public float cameraLowLimit = 0;
 	public float cameraUpAngleLimit = 58;
 	public float cameraCloseLimit = 1;
-	private Vector3 prevPos;
 	private float lowLimitAngle;
 
 	//@script AddComponentMenu("Camera-Control/Mouse Orbit");
 	
 	void Start ()
 	{
-		prevPos = Vector3.zero;
 		x = transform.eulerAngles.y; 
 		y = transform.eulerAngles.x;
 	
@@ -47,14 +45,17 @@ public class CameraFollow : MonoBehaviour
 			y -= Input.GetAxis("Mouse Y") * ySpeed; //0.02f; 
 
 
-			if (y > cameraUpAngleLimit){
+			if (y > cameraUpAngleLimit)
 				y = cameraUpAngleLimit;
-			}
+			
+			if(y < -90)
+				y = -90;
+
+
 
 			Quaternion rotation = Quaternion.Euler(y, x, 0); 
 			Vector3 position = rotation * new Vector3(0.0f, 2.0f, -distance) + target.position; 
 
-			float dist = Mathf.Sqrt(Mathf.Abs(target.position.z-transform.position.z)*Mathf.Abs(target.position.z-transform.position.z)+(Mathf.Sqrt(Mathf.Abs(target.position.x-transform.position.x)*Mathf.Abs(target.position.x-transform.position.x)+Mathf.Abs(target.position.y-transform.position.y)*Mathf.Abs(target.position.y-transform.position.y))));
 
 
 			if (position.y < cameraLowLimit && lowLimitAngle == 0) {
@@ -66,16 +67,14 @@ public class CameraFollow : MonoBehaviour
 				rotation = Quaternion.Euler (lowLimitAngle, x, 0);
 			}
 
-			if(dist < cameraCloseLimit){
-				if(y<0)
-					position = prevPos;
-			} 
+
+			
 			 
 
 			transform.position = position;
 			transform.rotation = rotation;
 
-			prevPos = position;
+
 
 
 		}
