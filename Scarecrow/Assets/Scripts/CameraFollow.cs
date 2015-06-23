@@ -45,7 +45,7 @@ public class CameraFollow : MonoBehaviour
 			x += Input.GetAxis("Mouse X") * xSpeed * distance; //0.02f; 
 			y -= Input.GetAxis("Mouse Y") * ySpeed; //0.02f; 
 			Quaternion rotation = Quaternion.Euler(y, x, 0); 
-			Vector3 position = rotation * new Vector3(0.0f, 0.0f, -distance) + target.position; 
+			Vector3 position = rotation * new Vector3(0.0f, 2.0f, -distance) + target.position; 
 			transform.rotation = rotation; 
 			transform.position = position;
 		}
