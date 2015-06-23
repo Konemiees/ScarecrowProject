@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
 		Turning ();
 
-		Animating (h, v);
+		//Animating (h, v);
 		
 	}
 	
