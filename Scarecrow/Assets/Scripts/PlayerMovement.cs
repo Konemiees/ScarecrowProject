@@ -2,13 +2,17 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-	public float speed = 6f;            // The speed that the player will move at.
+	public float speed = 6f;            // The max speed that the player will move at.
+	public float acceleration = 6f;     // The acceleration  of the player.
+
+	float currentSpeed;
 	
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
 	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
+
 	
 	void Awake ()
 	{
@@ -18,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 		// Set up references.
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
+
+		currentSpeed = 0;
 	}
 	
 	
@@ -39,12 +45,17 @@ public class PlayerMovement : MonoBehaviour
 	
 	void Move (float h, float v)
 	{
+
+		h = IncrementTowards (currentSpeed, speed * Time.deltaTime * h, acceleration);
+		v = IncrementTowards (currentSpeed, speed * Time.deltaTime * v, acceleration);
+
 		// Set the movement vector based on the axis input.
 		movement.Set (h, 0f, v);
 		
 		// Normalise the movement vector and make it proportional to the speed per second.
-		movement = movement.normalized * speed * Time.deltaTime;
+		//movement = movement.normalized * speed * Time.deltaTime;
 		
+
 		// Move the player to it's current position plus the movement.
 		playerRigidbody.MovePosition (transform.position + movement);
 	}
@@ -71,15 +82,32 @@ public class PlayerMovement : MonoBehaviour
 			
 			// Set the player's rotation to this new rotation.
 			playerRigidbody.MoveRotation (newRotation);
+
 		}
 	}
 	
 	void Animating (float h, float v)
 	{
 		// Create a boolean that is true if either of the input axes is non-zero.
-		bool walking = h != 0f || v != 0f;
+		int walking = (int) Mathf.Sign(Mathf.Abs(h)+Mathf.Abs(v));
 		
+
 		// Tell the animator whether or not the player is walking.
-		anim.SetBool ("IsWalking", walking);
+		anim.SetInteger ("IsWalking", walking);
+	}
+
+
+
+	// Halutaan käyttää, koska muuten liikkeet töksähtelevät.
+
+	private float IncrementTowards(float n, float target, float a){
+		if(n == target){
+			return n;
+		}
+		else{
+			float dir = Mathf.Sign(target-n);
+			n+=a*Time.deltaTime*dir;
+			return(dir == Mathf.Sign(target-n))? n: target;
+		}
 	}
 }
