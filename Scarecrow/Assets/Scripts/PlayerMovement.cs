@@ -37,8 +37,7 @@ public class PlayerMovement : MonoBehaviour
 		Turning ();
 
 		Animating (h, v);
-
-		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
+		
 	}
 	
 	void Move (float h, float v)
@@ -72,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
 			newRotation = Quaternion.LookRotation (playerToMouse);
 			
-
+			transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
 
 
 
