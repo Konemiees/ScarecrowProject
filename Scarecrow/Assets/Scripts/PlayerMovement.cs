@@ -29,11 +29,12 @@ public class PlayerMovement : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		float h = Input.GetAxisRaw ("Horizontal");
+		float h = Input.GetAxisRaw ("Horizontal");;
 		float v = Input.GetAxisRaw ("Vertical");
 
-		Move (h, v);
-
+		if (h!=0 || v!=0) {
+			Move (h, v);
+		}
 		Turning ();
 
 		//Animating (h, v);
@@ -43,12 +44,48 @@ public class PlayerMovement : MonoBehaviour
 	void Move (float h, float v)
 	{
 
+		float turn = 0;
+		
+
+		if (v == 1) {
+			if (h == 1){
+				turn = 45;
+				h = 0;
+			}if (h == -1){
+				turn = -45;
+				h = 0;
+			}
+		} else if (v == 0) {
+			if (h == 1){
+				turn = 90;
+				v = 1;
+				h = 0;
+			}if (h == -1){
+				turn = -90;
+				v= 1;
+				h = 0;
+			}
+		} else {
+			if (h == 0){
+				turn = 180;
+				v = 1;
+			}if (h == 1){
+				turn = 135;
+				h = 0;
+				v = 1;
+			}if (h == -1){
+				turn =-135;
+				h = 0;
+				v = 1;
+			}
+		}
+
 		h = IncrementTowards (currentSpeed, speed * Time.deltaTime * h, acceleration);
 		v = IncrementTowards (currentSpeed, speed * Time.deltaTime * v, acceleration);
 
 		movement.Set (h, 0f, v);
-		
 
+		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, turn + Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
 
 		transform.Translate (movement);
 
@@ -71,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
 
 			newRotation = Quaternion.LookRotation (playerToMouse);
 			
-			transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
 
 
 

@@ -155,6 +155,9 @@ ModelImporter:
     7400098: Run_Rightb
     7400100: Runb
     7400102: Walkb
+    7400104: Battle_Stanceb
+    7400106: Roll_nd
+    7400108: Rollb
     9500000: //RootNode
     13700000: Scarecrow
   materials:
