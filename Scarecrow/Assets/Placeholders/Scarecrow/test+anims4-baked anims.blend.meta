@@ -150,6 +150,11 @@ ModelImporter:
     7400088: Run_Right
     7400090: Run
     7400092: Walk
+    7400094: Jogb
+    7400096: Run_Leftb
+    7400098: Run_Rightb
+    7400100: Runb
+    7400102: Walkb
     9500000: //RootNode
     13700000: Scarecrow
   materials:
