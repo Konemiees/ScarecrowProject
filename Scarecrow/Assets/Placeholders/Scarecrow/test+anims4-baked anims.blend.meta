@@ -42,6 +42,10 @@ ModelImporter:
     100068: UpperLeg_R
     100070: widget_ankle_L
     100072: widget_toes_L
+    100074: Cylinder
+    100076: Cylinder_001
+    100078: Cylinder_002
+    100080: Moonika_Arma_
     400000: chest
     400002: finger1_L
     400004: finger1_R
@@ -79,13 +83,26 @@ ModelImporter:
     400068: UpperLeg_R
     400070: widget_ankle_L
     400072: widget_toes_L
+    400074: Cylinder
+    400076: Cylinder_001
+    400078: Cylinder_002
+    400080: Moonika_Arma_
     2300000: widget_ankle_L
     2300002: widget_toes_L
+    2300004: Cylinder
+    2300006: Cylinder_001
+    2300008: Cylinder_002
     3300000: widget_ankle_L
     3300002: widget_toes_L
+    3300004: Cylinder
+    3300006: Cylinder_001
+    3300008: Cylinder_002
     4300000: widget_toes_L
     4300002: widget_ankle_L
     4300004: Scarecrow
+    4300006: Cylinder_002
+    4300008: Cylinder_001
+    4300010: Cylinder
     7400000: Default Take
     7400002: attack1
     7400004: attack1b
@@ -128,6 +145,19 @@ ModelImporter:
     7400078: roll_2ndb
     7400080: Run_foreward
     7400082: Run_forewardb
+    7400084: Run_Left
+    7400086: Jog
+    7400088: Run_Right
+    7400090: Run
+    7400092: Walk
+    7400094: Jogb
+    7400096: Run_Leftb
+    7400098: Run_Rightb
+    7400100: Runb
+    7400102: Walkb
+    7400104: Battle_Stanceb
+    7400106: Roll_nd
+    7400108: Rollb
     9500000: //RootNode
     13700000: Scarecrow
   materials:
