@@ -3,16 +3,22 @@
 public class PlayerMovement : MonoBehaviour
 {
 	public float speed = 6f;            
-	public float acceleration = 6f;     
+	public float acceleration = 6f; 
+	public float gravity = 10;
+	public float jumpHeight = 8;
 
 	float currentSpeed;
+	float currentSpeedGrav;
 	Quaternion newRotation;
 	
 	Vector3 movement;                   
 	Animator anim;                      
 	Rigidbody playerRigidbody;          
 	int floorMask;                      
-	float camRayLength = 100f;          
+	float camRayLength = 100f; 
+
+	private bool jumped;
+	private bool floored;
 
 	
 	void Awake ()
@@ -20,8 +26,11 @@ public class PlayerMovement : MonoBehaviour
 		floorMask = LayerMask.GetMask ("Floor");
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
+		jumped = false;
 
 		currentSpeed = 0;
+		floored = true;
+		currentSpeedGrav = 0;
 
 		newRotation = transform.rotation;
 	}
@@ -31,11 +40,13 @@ public class PlayerMovement : MonoBehaviour
 	{
 		float h = Input.GetAxisRaw ("Horizontal");;
 		float v = Input.GetAxisRaw ("Vertical");
+		jumped = Input.GetButtonDown ("Jump");
 
-		if (h!=0 || v!=0) {
-			Move (h, v);
-		}
+
+		Move (h, v);
+		
 		Turning ();
+
 
 		//Animating (h, v);
 		
@@ -45,45 +56,60 @@ public class PlayerMovement : MonoBehaviour
 	{
 
 		float turn = 0;
-		
 
-		if (v == 1) {
-			if (h == 1){
-				turn = 45;
-				h = 0;
-			}if (h == -1){
-				turn = -45;
-				h = 0;
-			}
-		} else if (v == 0) {
-			if (h == 1){
-				turn = 90;
-				v = 1;
-				h = 0;
-			}if (h == -1){
-				turn = -90;
-				v= 1;
-				h = 0;
-			}
-		} else {
-			if (h == 0){
-				turn = 180;
-				v = 1;
-			}if (h == 1){
-				turn = 135;
-				h = 0;
-				v = 1;
-			}if (h == -1){
-				turn =-135;
-				h = 0;
-				v = 1;
+		if (h != 0 || v != 0) {
+			if (v == 1) {
+				if (h == 1) {
+					turn = 45;
+					h = 0;
+				}
+				if (h == -1) {
+					turn = -45;
+					h = 0;
+				}
+			} else if (v == 0) {
+				if (h == 1) {
+					turn = 90;
+					v = 1;
+					h = 0;
+				}
+				if (h == -1) {
+					turn = -90;
+					v = 1;
+					h = 0;
+				}
+			} else {
+				if (h == 0) {
+					turn = 180;
+					v = 1;
+				}
+				if (h == 1) {
+					turn = 135;
+					h = 0;
+					v = 1;
+				}
+				if (h == -1) {
+					turn = -135;
+					h = 0;
+					v = 1;
+				}
 			}
 		}
+
+
 
 		h = IncrementTowards (currentSpeed, speed * Time.deltaTime * h, acceleration);
 		v = IncrementTowards (currentSpeed, speed * Time.deltaTime * v, acceleration);
 
-		movement.Set (h, 0f, v);
+		/*float g = IncrementTowards (currentSpeedGrav, maxFallSpeed * Time.deltaTime * -1, gravity);
+
+		currentSpeedGrav -= gravity*Time.deltaTime;
+
+		if(jumped){
+			currentSpeedGrav = jumpHeight;
+		}**/
+
+		movement.Set (h, 0, v);
 
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, turn + Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
 
