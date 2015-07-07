@@ -11,22 +11,30 @@ public class PlayerMovement : MonoBehaviour
 	float currentSpeedGrav;
 	Quaternion newRotation;
 	
-	Vector3 movement;                   
+	//Vector3 movement;                   
 	Animator anim;                      
 	Rigidbody playerRigidbody;          
-	int floorMask;                      
-	float camRayLength = 100f; 
+	//int floorMask;                      
+	//float camRayLength = 100f; 
 
+	float h;
+	float v;
+
+	private bool moving;
 	private bool jumped;
 	private bool floored;
+	private bool died;
+
 
 	
 	void Awake ()
 	{
-		floorMask = LayerMask.GetMask ("Floor");
+		//floorMask = LayerMask.GetMask ("Floor");
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
 		jumped = false;
+		died = false;
+
 
 		currentSpeed = 0;
 		floored = true;
@@ -38,17 +46,19 @@ public class PlayerMovement : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		float h = Input.GetAxisRaw ("Horizontal");;
-		float v = Input.GetAxisRaw ("Vertical");
+		h = Input.GetAxisRaw ("Horizontal");;
+		v = Input.GetAxisRaw ("Vertical");
 		jumped = Input.GetButtonDown ("Jump");
 
+		if (h != 0 || v != 0) {
+			Move (h, v);
+		}
 
-		Move (h, v);
-		
-		Turning ();
+
+		//Turning ();
 
 
-		//Animating (h, v);
+		Animating (h, v);
 		
 	}
 	
@@ -98,8 +108,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-		h = IncrementTowards (currentSpeed, speed * Time.deltaTime * h, acceleration);
-		v = IncrementTowards (currentSpeed, speed * Time.deltaTime * v, acceleration);
+		//h = IncrementTowards (currentSpeed, speed * Time.deltaTime * h, acceleration);
+		//v = IncrementTowards (currentSpeed, speed * Time.deltaTime * v, acceleration);
 
 		/*float g = IncrementTowards (currentSpeedGrav, maxFallSpeed * Time.deltaTime * -1, gravity);
 
@@ -109,49 +119,39 @@ public class PlayerMovement : MonoBehaviour
 			currentSpeedGrav = jumpHeight;
 		}**/
 
-		movement.Set (h, 0, v);
+		//movement.Set (h, 0, v);
 
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, turn + Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
 
-		transform.Translate (movement);
+		//transform.Translate (movement);
 
 
 	}
-	
-	void Turning ()
-	{
-		// Create a ray from the mouse cursor on screen in the direction of the camera.
-		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-		// Create a RaycastHit variable to store information about what was hit by the ray.
-		RaycastHit floorHit;
-		// Perform the raycast and if it hits something on the floor layer...
-		if(Physics.Raycast (camRay, out floorHit, camRayLength, floorMask))
-		{
-			// Create a vector from the player to the point on the floor the raycast from the mouse hit.
-			Vector3 playerToMouse = floorHit.point - transform.position;
-			// Ensure the vector is entirely along the floor plane.
-			playerToMouse.y = 0f;
 
-			newRotation = Quaternion.LookRotation (playerToMouse);
-			
-
-
-
-		}
-	}
 	
 	void Animating (float h, float v)
 	{
-		int walking = (int) Mathf.Sign(Mathf.Abs(h)+Mathf.Abs(v));
+		moving = h != 0 || v != 0;
 
-		anim.SetInteger ("IsWalking", walking);
+		anim.SetBool ("Moving", moving);
+
+
+
+		if (moving) {
+			currentSpeed = 1;
+			if(Input.GetButton("Walk"))
+				currentSpeed = 0;
+			if(Input.GetButton("Run"))
+				currentSpeed = 2;
+			anim.SetFloat("MoveSpeed", currentSpeed);
+		}
 	}
 
 
 
 	// Halutaan käyttää, koska muuten liikkeet töksähtelevät.
 
-	private float IncrementTowards(float n, float target, float a){
+	/*private float IncrementTowards(float n, float target, float a){
 		if(n == target){
 			return n;
 		}
@@ -160,5 +160,5 @@ public class PlayerMovement : MonoBehaviour
 			n+=a*Time.deltaTime*dir;
 			return(dir == Mathf.Sign(target-n))? n: target;
 		}
-	}
+	}**/
 }
