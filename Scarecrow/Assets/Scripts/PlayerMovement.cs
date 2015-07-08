@@ -8,10 +8,9 @@ public class PlayerMovement : MonoBehaviour
 	public float jumpHeight = 8;**/
 
 	public float idleWaitTime = 10;
+	public float rollWaitTime = 2;
 
 	float currentSpeed;
-	float currentSpeedGrav;
-	Quaternion newRotation;
 	
 	//Vector3 movement;                   
 	Animator anim;                      
@@ -23,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 	float v;
 
 	private float groundDist;
+	private float rollTime;
 
 	private bool moving;
 	private bool floored;
@@ -42,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
 
 		currentSpeed = 0;
 		floored = true;
-		currentSpeedGrav = 0;
 		timeIdle = 0;
-
-		newRotation = transform.rotation;
+		
 
 		groundDist = GetComponent<Collider> ().bounds.extents.y;
+
+		rollTime = 2.1f;
 
 	}
 	
@@ -173,12 +173,24 @@ public class PlayerMovement : MonoBehaviour
 			timeIdle = 0;
 		}
 
-		floored = Physics.Raycast (transform.position, - Vector3.up, groundDist + 0.001f);
-		print (floored);
+
+		floored = Physics.Raycast (transform.position, - Vector3.up, (groundDist + 0.001f) / 13.5f);
+
+		if (rollTime < rollWaitTime) {
+			floored = false;
+			rollTime += Time.deltaTime;
+		} 
+		
 
 		if (Input.GetButtonDown ("Jump") && floored) {
 			anim.SetTrigger("Jump");
 			floored = false;
+		}
+
+		if (Input.GetButtonDown ("Roll") && floored) {
+			anim.SetTrigger("Roll");
+			floored = false;
+			rollTime = 0;
 		}
 
 
