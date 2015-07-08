@@ -40,6 +40,16 @@ ModelImporter:
     100064: upper_arm.R
     100066: UpperLeg.L
     100068: UpperLeg.R
+    100070: finger2.L_end
+    100072: finger2.R_end
+    100074: foot_roll.L_end
+    100076: foot_roll.R_end
+    100078: foot_tumble.L_end
+    100080: foot_tumble.R_end
+    100082: head_end
+    100084: Toes.L_end
+    100086: Toes.R_end
+    100088: ZBrush_defualt_group
     400000: chest
     400002: finger1.L
     400004: finger1.R
@@ -75,7 +85,18 @@ ModelImporter:
     400064: upper_arm.R
     400066: UpperLeg.L
     400068: UpperLeg.R
+    400070: finger2.L_end
+    400072: finger2.R_end
+    400074: foot_roll.L_end
+    400076: foot_roll.R_end
+    400078: foot_tumble.L_end
+    400080: foot_tumble.R_end
+    400082: head_end
+    400084: Toes.L_end
+    400086: Toes.R_end
+    400088: ZBrush_defualt_group
     4300000: Scarecrow
+    4300002: ZBrush_defualt_group
     7400000: Moonika Arma.|attack1b
     7400002: Moonika Arma.|attack2b
     7400004: Moonika Arma.|attack3b
@@ -124,6 +145,7 @@ ModelImporter:
     7400090: Moonika Arma.|Rollb
     9500000: //RootNode
     13700000: Scarecrow
+    13700002: ZBrush_defualt_group
   materials:
     importMaterials: 1
     materialName: 0
@@ -134,14 +156,19 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 'MuscleClip ''test+anims3'' conversion warning: ''Moonika
-      Arma./Scarecrow controller/hips/spine/chest/Shoulder.L/upper_arm.L/forearm.L/hand.L''
-      has scale animation''. It is not supported.
-
-      MuscleClip ''test+anims3'' conversion warning: ''Moonika Arma./Scarecrow controller/hips/spine/chest/Shoulder.R/upper_arm.R/forearm.R/hand.R''
-      has scale animation''. It is not supported.
-
-'
+    animationImportWarnings: "MuscleClip 'test+anims3' conversion warning: Bone length
+      is different in avatar and animation\n\n     'UpperLeg.L' : position error =
+      22.872196 mm\n\n     'LowerLeg.L' : position error = 25.670671 mm\n\n     'Foot.L'
+      : position error = 53.367058 mm\n\n     'Toes.L' : position error = 23.189674
+      mm\n\n     'spine' : position error = 8.081716 mm\n\n     'chest' : position
+      error = 47.590408 mm\n\n     'neck' : position error = 20.996246 mm\n\n     'head'
+      : position error = 9.552197 mm\n\n     'Shoulder.L' : position error = 49.099144
+      mm\n\n     'forearm.L' : position error = 13.905724 mm\n\n     'hand.L' : position
+      error = 45.692059 mm\n\n     'Shoulder.R' : position error = 49.099194 mm\n\n
+      \    'forearm.R' : position error = 13.905491 mm\n\n     'hand.R' : position
+      error = 45.692318 mm\n\n     'UpperLeg.R' : position error = 22.872168 mm\n\n
+      \    'LowerLeg.R' : position error = 25.670776 mm\n\n     'Foot.R' : position
+      error = 53.366879 mm\n\n     'Toes.R' : position error = 23.189714 mm\n\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
