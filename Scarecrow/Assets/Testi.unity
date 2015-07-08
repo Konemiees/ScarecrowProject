@@ -596,7 +596,7 @@ MonoBehaviour:
   target: {fileID: 1303145004}
   smoothing: 5
   distance: 4
-  xSpeed: 10
+  xSpeed: 5
   ySpeed: 5
   cameraLowLimit: .5
   cameraUpAngleLimit: 58
