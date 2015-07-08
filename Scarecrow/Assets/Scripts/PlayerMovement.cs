@@ -2,10 +2,12 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-	public float speed = 6f;            
+	/*public float speed = 6f;            
 	public float acceleration = 6f; 
 	public float gravity = 10;
-	public float jumpHeight = 8;
+	public float jumpHeight = 8;**/
+
+	public float idleWaitTime = 10;
 
 	float currentSpeed;
 	float currentSpeedGrav;
@@ -24,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
 	private bool jumped;
 	private bool floored;
 	private bool died;
-
+	private bool fighting;
+	private int nextAttack;
+	private float timeIdle;
 
 	
 	void Awake ()
@@ -39,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
 		currentSpeed = 0;
 		floored = true;
 		currentSpeedGrav = 0;
+		timeIdle = 0;
 
 		newRotation = transform.rotation;
 	}
@@ -138,13 +143,33 @@ public class PlayerMovement : MonoBehaviour
 
 
 		if (moving) {
-			currentSpeed = 1;
-			if(Input.GetButton("Walk"))
-				currentSpeed = 0;
-			if(Input.GetButton("Run"))
-				currentSpeed = 2;
+			if(currentSpeed != 1 && !Input.GetButton("Walk") && !Input.GetButton("Run")){
+				float s = Mathf.Sign(currentSpeed - 1)*-1;
+				currentSpeed += Time.deltaTime*s;
+				if(Mathf.Sign(currentSpeed -1) == s)
+					currentSpeed = 1;
+			} if(Input.GetButton("Walk") && currentSpeed != 0){
+				currentSpeed -= Time.deltaTime;
+				if(currentSpeed < 0)
+					currentSpeed = 0;
+			} if(Input.GetButton("Run") && currentSpeed != 2){
+				currentSpeed += Time.deltaTime;
+				if(currentSpeed >2)
+					currentSpeed =2;
+			}
+
 			anim.SetFloat("MoveSpeed", currentSpeed);
+		} 
+
+		if (!moving && !fighting && floored) {
+			timeIdle += Time.deltaTime/idleWaitTime;
+			if (timeIdle / idleWaitTime >= 1)
+				timeIdle = 1;
+			anim.SetFloat ("IdleWaitTime", timeIdle);
+		} else {
+			timeIdle = 0;
 		}
+
 	}
 
 
