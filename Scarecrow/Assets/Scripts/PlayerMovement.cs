@@ -22,8 +22,9 @@ public class PlayerMovement : MonoBehaviour
 	float h;
 	float v;
 
+	private float groundDist;
+
 	private bool moving;
-	private bool jumped;
 	private bool floored;
 	private bool died;
 	private bool fighting;
@@ -36,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
 		//floorMask = LayerMask.GetMask ("Floor");
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
-		jumped = false;
 		died = false;
 
 
@@ -46,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
 		timeIdle = 0;
 
 		newRotation = transform.rotation;
+
+		groundDist = GetComponent<Collider> ().bounds.extents.y;
+
 	}
 	
 	
@@ -53,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		h = Input.GetAxisRaw ("Horizontal");;
 		v = Input.GetAxisRaw ("Vertical");
-		jumped = Input.GetButtonDown ("Jump");
+
 
 		if (h != 0 || v != 0) {
 			Move (h, v);
@@ -170,20 +173,20 @@ public class PlayerMovement : MonoBehaviour
 			timeIdle = 0;
 		}
 
+		floored = Physics.Raycast (transform.position, - Vector3.up, groundDist + 0.001f);
+		print (floored);
+
+		if (Input.GetButtonDown ("Jump") && floored) {
+			anim.SetTrigger("Jump");
+			floored = false;
+		}
+
+
+	
+
 	}
 
 
 
-	// Halutaan käyttää, koska muuten liikkeet töksähtelevät.
 
-	/*private float IncrementTowards(float n, float target, float a){
-		if(n == target){
-			return n;
-		}
-		else{
-			float dir = Mathf.Sign(target-n);
-			n+=a*Time.deltaTime*dir;
-			return(dir == Mathf.Sign(target-n))? n: target;
-		}
-	}**/
 }
