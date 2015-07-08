@@ -490,10 +490,27 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5cc2d2f1429b2f4f945e03cd5e12b14, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1303145003 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125688, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
+  m_PrefabInternal: {fileID: 2006858365}
 --- !u!4 &1303145004 stripped
 Transform:
   m_PrefabParentObject: {fileID: 485864, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
   m_PrefabInternal: {fileID: 2006858365}
+--- !u!136 &1303145008
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303145003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .449999988
+  m_Height: 1.94190907
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!1 &1662499477
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +773,7 @@ Transform:
   m_GameObject: {fileID: 1790026758}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 500, y: 500, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -811,7 +828,12 @@ Prefab:
       propertyPath: m_AngularDrag
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11410338, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
+      propertyPath: rollWaitTime
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 13685620, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2100318375
