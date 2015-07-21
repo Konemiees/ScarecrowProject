@@ -18,6 +18,7 @@ public class CameraFollow : MonoBehaviour
 	public float cameraUpAngleLimit = 58;
 	public float cameraCloseLimit = 1;
 	private float lowLimitAngle;
+	public Transform foundTarget;
 
 	//@script AddComponentMenu("Camera-Control/Mouse Orbit");
 	
@@ -32,15 +33,8 @@ public class CameraFollow : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
-		// Create a postion the camera is aiming for based on the offset from the target.
-		Vector3 targetCamPos = target.position + offset;
-		
-
-		// Smoothly interpolate between the camera's current position and it's target position.
-		transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
-
 		 
-		 if (target) { 
+		 if (target && !foundTarget) { 
 			x += Input.GetAxis("Mouse X") * xSpeed * distance; //0.02f; 
 			y -= Input.GetAxis("Mouse Y") * ySpeed; //0.02f; 
 
@@ -77,6 +71,23 @@ public class CameraFollow : MonoBehaviour
 
 
 
+		}
+		if (target && foundTarget) {
+
+			Vector3 lookPoint = (target.position + foundTarget.position)/2;
+
+			Vector3 position = target.position;
+
+			transform.position = position;
+
+			transform.LookAt(lookPoint);
+
+			//position = transform.rotation *  position + new Vector3(0.0f, 2.0f, -distance);
+
+			transform.Translate( new Vector3(0.0f, 2.0f, -distance));
+
+
+			transform.LookAt(lookPoint);
 		}
 
 	}
