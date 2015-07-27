@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
 	public float cameraUpAngleLimit = 58;
 	public float cameraCloseLimit = 1;
 	private float lowLimitAngle;
-	public Transform foundTarget;
+	private Transform foundTarget;
 
 	//@script AddComponentMenu("Camera-Control/Mouse Orbit");
 	

@@ -31,6 +31,13 @@ public class PlayerMovement : MonoBehaviour
 	private int nextAttack;
 	private float timeIdle;
 
+	private float turn;
+	private float lastTurn;
+	private Vector3 turnBegin;
+	private float turnPoint;
+	private Vector3 turnChangePoint;
+	private Vector3 turnEnd;
+
 	
 	void Awake ()
 	{
@@ -48,6 +55,10 @@ public class PlayerMovement : MonoBehaviour
 		groundDist = GetComponent<Collider> ().bounds.extents.y;
 
 		rollTime = 2.1f;
+		turn = 0;
+		lastTurn = 0;
+		turnPoint = 1;
+		turnChangePoint = transform.localEulerAngles;
 
 	}
 	
@@ -56,24 +67,17 @@ public class PlayerMovement : MonoBehaviour
 	{
 		h = Input.GetAxisRaw ("Horizontal");;
 		v = Input.GetAxisRaw ("Vertical");
-
-
-		if (h != 0 || v != 0) {
+				
+		if(h != 0 || v != 0)
 			Move (h, v);
-		}
-
-
-		//Turning ();
-
 
 		Animating (h, v);
 		
 	}
 	
-	void Move (float h, float v)
-	{
+	void Move (float h, float v){
 
-		float turn = 0;
+		turn = 0;
 
 		if (h != 0 || v != 0) {
 			if (v == 1) {
@@ -109,15 +113,43 @@ public class PlayerMovement : MonoBehaviour
 				if (h == -1) {
 					turn = -135;
 					h = 0;
-					v = 1;
+					v = 1; 
 				}
 			}
+		} 
+
+		if (turn < 0)
+			turn += 360;
+
+
+		//TÄHÄN EI SAA KOSKEA!!!! T:Konsta
+		if (lastTurn != turn) {
+
+			if(turnChangePoint.y >= 360)
+				turnChangePoint.y -= 360;
+			if(turnChangePoint.y < 0)
+				turnChangePoint.y += 360;
+
+			lastTurn = turn;
+			turnPoint = 0;
+			turnBegin = turnChangePoint;
+
+			if (turnChangePoint.y > 180 && (turn -turnChangePoint.y)< -180)
+				turnBegin.y -= 360;
+			if (turnChangePoint.y < 180 && (turn -turnChangePoint.y)> 180)
+				turn -= 360;
+
+			turnEnd = new Vector3 (transform.localEulerAngles.x, turn + Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
 		}
 
 
+		if (turnPoint < 1) {
+			turnPoint += Time.deltaTime *2;
+		} else {
+			turnPoint = 1;
+		}
+		turnChangePoint = Vector3.Lerp(turnBegin, turnEnd,turnPoint); 
 
-		//h = IncrementTowards (currentSpeed, speed * Time.deltaTime * h, acceleration);
-		//v = IncrementTowards (currentSpeed, speed * Time.deltaTime * v, acceleration);
 
 		/*float g = IncrementTowards (currentSpeedGrav, maxFallSpeed * Time.deltaTime * -1, gravity);
 
@@ -127,12 +159,8 @@ public class PlayerMovement : MonoBehaviour
 			currentSpeedGrav = jumpHeight;
 		}**/
 
-		//movement.Set (h, 0, v);
-
-		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, turn + Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z); 
-
-		//transform.Translate (movement);
-
+		transform.localEulerAngles = turnChangePoint;
+		
 
 	}
 
