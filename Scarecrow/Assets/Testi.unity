@@ -246,6 +246,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 178214, guid: 051db55cec1506241949bb6d34f45286, type: 2}
+      propertyPath: m_TagString
+      value: Targetable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 051db55cec1506241949bb6d34f45286, type: 2}
   m_IsPrefabParent: 0
@@ -836,6 +840,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300002, guid: 7c18db451c4dbfc41a0a8db684d903f3, type: 3}
+    - target: {fileID: 11410338, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
+      propertyPath: turnSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 13685620, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ab0b6d9fef9b6b44c95a73fb711a086c, type: 2}
