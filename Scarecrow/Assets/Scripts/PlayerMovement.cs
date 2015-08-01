@@ -104,52 +104,16 @@ public class PlayerMovement : MonoBehaviour
 
 
 		turn = 0;
-
-		if (h != 0 || v != 0) {
-			if (v == 1) {
-				if (h == 1) {
-					turn = 45;
-					h = 0;
-				}
-				if (h == -1) {
-					turn = -45;
-					h = 0;
-				}
-			} else if (v == 0) {
-				if (h == 1) {
-					turn = 90;
-					v = 1;
-					h = 0;
-				}
-				if (h == -1) {
-					turn = -90;
-					v = 1;
-					h = 0;
-				}
-			} else {
-				if (h == 0) {
-					turn = 180;
-					v = 1;
-				}
-				if (h == 1) {
-					turn = 135;
-					h = 0;
-					v = 1;
-				}
-				if (h == -1) {
-					turn = -135;
-					h = 0;
-					v = 1; 
-				}
-			}
-		} 
-
-		if (turn < 0)
-			turn += 360;
-
-
-
-
+		
+		if (h >= 0 && v >= 0)
+			turn = Mathf.Atan (h / v) * 180 / Mathf.PI;
+		if (h < 0 && v >= 0)
+			turn = Mathf.Atan (-(v / h)) * 180 / Mathf.PI + 270;
+		if (h >= 0 && v < 0)
+			turn = Mathf.Atan (-(v / h)) * 180 / Mathf.PI + 90;
+		if (h < 0 &&v < 0)
+			turn = Mathf.Atan (h / v) * 180 / Mathf.PI + 180;
+		
 
 		if (lastTurn != turn || deltaCamEnd != Vector3.zero) {
 

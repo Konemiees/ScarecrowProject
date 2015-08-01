@@ -3,10 +3,8 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-	public Transform target;            // The position that that camera will be following.
-	public float smoothing = 5f;        // The speed with which the camera will be following.
-	
-	Vector3 offset;                     // The initial offset from the target.
+	public Transform target;            
+	public float smoothing = 5f;                           
 
 	public float distance = 5.0f; 
 	public float xSpeed = 125.0f; 
@@ -31,8 +29,6 @@ public class CameraFollow : MonoBehaviour
 		x = transform.eulerAngles.y; 
 		y = transform.eulerAngles.x;
 	
-		// Calculate the initial offset.
-		offset = transform.position - target.position;
 
 		cam = Camera.main;
 	}
@@ -44,8 +40,8 @@ public class CameraFollow : MonoBehaviour
 		checkTarget ();
 		 
 		 if (target && !foundTarget) { 
-			x += Input.GetAxis("Mouse X") * xSpeed * distance; //0.02f; 
-			y -= Input.GetAxis("Mouse Y") * ySpeed; //0.02f; 
+			x += Input.GetAxis("Mouse X") * xSpeed;  
+			y -= Input.GetAxis("Mouse Y") * ySpeed; 
 
 
 			if (y > cameraUpAngleLimit)
@@ -91,8 +87,6 @@ public class CameraFollow : MonoBehaviour
 
 			transform.LookAt(lookPoint);
 
-			//position = transform.rotation *  position + new Vector3(0.0f, 2.0f, -distance);
-
 			transform.Translate( new Vector3(0.0f, 2.0f, -distance));
 
 
@@ -129,8 +123,11 @@ public class CameraFollow : MonoBehaviour
 
 			}
 		} else {
-			if (Input.GetButtonDown ("Lock"))
+			if (Input.GetButtonDown ("Lock")){
 				foundTarget = null;
+				x = transform.eulerAngles.y;
+				y = transform.eulerAngles.x;
+			}
 		}
 	
 		}
