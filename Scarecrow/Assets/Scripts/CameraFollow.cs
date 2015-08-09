@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
 
 	private Camera cam;
 
-	//@script AddComponentMenu("Camera-Control/Mouse Orbit");
+	public string targetName;
 	
 	void Start ()
 	{
@@ -100,15 +100,20 @@ public class CameraFollow : MonoBehaviour
 	void checkTarget(){
 
 		if (!foundTarget) {
+			Ray ray;
+			RaycastHit hit;
 			for (int i = 2; i > -3; i--) {
 
-				Ray ray;
-				RaycastHit hit;
 
 				//Horizontal raycast
 				ray = cam.ScreenPointToRay (new Vector3 (cam.pixelWidth / 2 + (i * .5f), cam.pixelHeight / 2, 0));
 
 				if (Physics.Raycast (ray, out hit)) {
+					if (hit.transform.gameObject.GetComponent<Stats>()){
+						targetName = hit.transform.gameObject.GetComponent<Stats>().name;
+					} else {
+						targetName = "";
+					}
 					if (hit.transform.gameObject.tag == "Targetable" && Input.GetButtonDown ("Lock"))
 						foundTarget = hit.transform;
 				}
@@ -117,6 +122,11 @@ public class CameraFollow : MonoBehaviour
 				ray = cam.ScreenPointToRay (new Vector3 (cam.pixelWidth / 2, cam.pixelHeight / 2 + (i * .5f), 0));
 
 				if (Physics.Raycast (ray, out hit)) {
+					if (hit.transform.gameObject.GetComponent<Stats>()){
+						targetName = hit.transform.gameObject.GetComponent<Stats>().name;
+					} else {
+						targetName = "";
+					}
 					if (hit.transform.gameObject.tag == "Targetable" && Input.GetButtonDown ("Lock"))
 						foundTarget = hit.transform;
 				}
@@ -127,6 +137,7 @@ public class CameraFollow : MonoBehaviour
 				foundTarget = null;
 				x = transform.eulerAngles.y;
 				y = transform.eulerAngles.x;
+				targetName = null;
 			}
 		}
 	
